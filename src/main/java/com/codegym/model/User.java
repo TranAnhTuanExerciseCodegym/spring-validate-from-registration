@@ -18,6 +18,14 @@ public class User implements Validator {
     @Email
     private String email;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNumber() {
         return number;
     }
