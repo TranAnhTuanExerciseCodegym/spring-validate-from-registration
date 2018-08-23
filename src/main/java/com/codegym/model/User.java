@@ -18,6 +18,15 @@ public class User implements Validator {
     @Email
     private String email;
 
+    public User(int id, String number, int age, @Size(min = 5, max = 45) String firstname, @Size(min = 5, max = 45) String lastname, @Email String email) {
+        this.id = id;
+        this.number = number;
+        this.age = age;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
