@@ -31,7 +31,7 @@ public class AppConfiguration implements ApplicationContextAware {
 
     @Bean
     public TemplateEngine templateEngine() {
-        TemplateEngine templateEngine = new TemplateEngine();
+        TemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         return templateEngine;
     }
@@ -46,7 +46,7 @@ public class AppConfiguration implements ApplicationContextAware {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasename("ValidationMessages");
+        messageSource.setBasenames("ValidationMessages");
         return messageSource;
     }
 

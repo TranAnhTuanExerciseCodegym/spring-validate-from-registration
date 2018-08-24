@@ -18,6 +18,9 @@ public class User implements Validator {
     @Email
     private String email;
 
+    public User() {
+    }
+
     public User(int id, String number, int age, @Size(min = 5, max = 45) String firstname, @Size(min = 5, max = 45) String lastname, @Email String email) {
         this.id = id;
         this.number = number;
@@ -85,13 +88,13 @@ public class User implements Validator {
         User user = (User) target;
         String number = user.getNumber();
         ValidationUtils.rejectIfEmpty(errors, "number", "number.empty");
-        if (number.length() > 11 || number.length() < 10) {
+        if (number.length()>11 || number.length()<10){
             errors.rejectValue("number", "number.length");
         }
-        if (!number.startsWith("0")) {
-            errors.rejectValue("number", "number.startWith");
+        if (!number.startsWith("0")){
+            errors.rejectValue("number", "number.startsWith");
         }
-        if (!number.matches("(^$|[0-9]*$)")) {
+        if (!number.matches("(^$|[0-9]*$)")){
             errors.rejectValue("number", "number.matches");
         }
 

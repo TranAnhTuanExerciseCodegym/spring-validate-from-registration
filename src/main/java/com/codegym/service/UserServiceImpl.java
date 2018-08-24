@@ -12,6 +12,9 @@ public class UserServiceImpl implements UserService {
 
     static {
         userMap.put(1, new User(1, "01628706136", 18, "tran anh", "anh tuan", "tincanxh@gmail.com"));
+        userMap.put(2, new User(2, "01628706136", 18, "tran anh2", "anh tuan", "tincanxh@gmail.com"));
+        userMap.put(3, new User(3, "01628706136", 18, "tran anh3", "anh tuan", "tincanxh@gmail.com"));
+        userMap.put(4, new User(4, "01628706136", 18, "tran anh4", "anh tuan", "tincanxh@gmail.com"));
     }
 
 
